@@ -6,6 +6,7 @@ import random
 root = Tk()
 root.title("Color Game")
 root.configure(width=300, height=250,)
+root.geometry("350x350")
 
 color_bank = ["YELLOW", "ORANGE", "BLUE", "GREEN", "RED", "BLACK", "PURPLE"]
 time = 30
@@ -74,5 +75,15 @@ enter = Entry(f3, font=("verdana", 18), relief=SUNKEN, border=15, justify="cente
 enter.pack(fill="both", expand=True, padx=5, pady=5)
 enter.bind('<Return>', start)
 enter.focus()
+
+# create menu
+my_menu = Menu(root)
+root.config(menu = my_menu)
+
+# create options dropdown for menu
+option_menu = Menu(my_menu, tearoff=False)  # tearoff is dotted line.... ugly
+my_menu.add_cascade(label="Options", menu = option_menu)  # create function for menu
+option_menu.add_command(label = "Quit", command = root.quit)
+# option_menu.add_separator()        # adds line to separate
 
 root.mainloop()
