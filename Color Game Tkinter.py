@@ -5,7 +5,6 @@ import random
 
 root = Tk()
 root.title("Color Game")
-root.configure(width=300, height=250,)
 root.geometry("350x350")
 
 color_bank = ["YELLOW", "ORANGE", "BLUE", "GREEN", "RED", "BLACK", "PURPLE"]
